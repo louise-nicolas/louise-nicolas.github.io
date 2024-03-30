@@ -6,29 +6,39 @@
         .card-title {
             color: var(--orange) !important;
         }
+        .lnr {
+            color: var(--orange) !important;
+        }
     }
 
     .card {
-        width: 376px;
-        height: 258px;
+        height: 200px;
         background-color: transparent;
         background-image: url(/src/assets/background-main-bis.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
         border: none;
+
+        @media screen and (min-width: 475px) {
+            height: 258px;
+        }
     }
 
     .card-body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .card-title {
         font-family: "palmer";
-        /*color: var(--orange);*/
-        font-size: 40px;
+        font-size: 38px;
+        line-height: .8;
+        transition: color .15s ease-in-out;
+    }
+    .lnr {
         transition: color .15s ease-in-out;
     }
 }

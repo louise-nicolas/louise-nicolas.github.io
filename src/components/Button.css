@@ -1,0 +1,71 @@
+.ln-button {
+    display: inline-block;
+}
+
+.ln-button__link {
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0.9em 1.6em;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 4px solid var(--pink);
+    border-radius: 0;
+    position: relative;
+    transition: all 700ms ease;
+}
+
+.ln-button__link:hover {
+    color: #fff !important;
+
+    .ln-button__blobs div {
+        transform: scale(1.4) translateY(0) translateZ(0);
+    }
+}
+
+.ln-button__blobs {
+    height: 100%;
+    filter: url(#goo);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -3px;
+    right: -1px;
+    z-index: -1;
+
+    div {
+        background-color: var(--pink);
+        width: 34%;
+        height: 100%;
+        border-radius: 100%;
+        position: absolute;
+        transform: scale(1.4) translateY(125%) translateZ(0);
+        transition: all 700ms ease;
+    }
+
+    div:nth-child(1) {
+        left: -5%;
+    }
+
+    div:nth-child(2) {
+        left: 30%;
+        transition-delay: 60ms;
+    }
+
+    div:nth-child(3) {
+        left: 66%;
+        transition-delay: 25ms;
+    }
+}
+
+.ln-button__svg {
+    display: block;
+    height: 0;
+    width: 0;
+}

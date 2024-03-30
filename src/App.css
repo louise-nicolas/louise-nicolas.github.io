@@ -1,6 +1,5 @@
 #root {
     width: 100%;
-    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
@@ -61,4 +60,109 @@
 
 .font-palmer {
     font-family: "palmer";
+}
+
+.wave {
+    height: 21px;
+    max-width: 315px;
+    margin: auto;
+    background-color: var(--pink);
+    --mask:
+            radial-gradient(12.5px at 50% calc(100% + 5.4px),#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) calc(50% - 18px) calc(50% - 6.5px + .5px)/36px 13px repeat-x,
+            radial-gradient(12.5px at 50% -5.4px,#0000 calc(99% - 4px),#000 calc(101% - 4px) 99%,#0000 101%) 50% calc(50% + 6.5px)/36px 13px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+/* timeline */
+.timeline-one {
+    width: 100%
+}
+
+.timeline-one .timeline-item {
+    position: relative;
+    width: 50%;
+    margin-left: 50%;
+    padding-bottom: .5rem;
+    padding-left: 1.5rem;
+    text-align: left
+}
+
+@media (max-width: 575.98px) {
+    .timeline-one .timeline-item {
+        width:100%;
+        margin-left: 0
+    }
+}
+
+.timeline-one .timeline-item img {
+    margin-bottom: 1.25rem
+}
+
+.timeline-one .timeline-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: .425rem;
+    margin-left: -.5rem;
+    border: .0625rem solid #e5e7eb;
+    border-radius: 50%
+}
+
+.timeline-one .timeline-item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -.1875rem;
+    width: .0625rem;
+    margin-top: 1.875rem;
+    margin-left: -.0625rem;
+    background-color: #e5e7eb
+}
+
+.timeline-one .timeline-item:nth-child(2n+1) {
+    margin-left: 0;
+    padding-right: 1.5rem;
+    padding-left: 0;
+    text-align: right
+}
+
+@media (max-width: 575.98px) {
+    .timeline-one .timeline-item:nth-child(2n+1) {
+        padding-right:0;
+        padding-left: 1.5rem;
+        text-align: left
+    }
+}
+
+.timeline-one .timeline-item:nth-child(2n+1):after,.timeline-one .timeline-item:nth-child(2n+1):before {
+    right: 0;
+    left: auto
+}
+
+@media (max-width: 575.98px) {
+    .timeline-one .timeline-item:nth-child(2n+1):after,.timeline-one .timeline-item:nth-child(2n+1):before {
+        right:auto;
+        left: 0
+    }
+}
+
+.timeline-one .timeline-item:nth-child(2n+1):before {
+    margin-right: -.5rem
+}
+
+.timeline-one .timeline-item:nth-child(2n+1):after {
+    margin-right: -.0625rem
+}
+
+.timeline-one.dark .timeline-item:before {
+    border: .0625rem solid #9ca3af
+}
+
+.timeline-one.dark .timeline-item:after {
+    background-color: #9ca3af
 }
